@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 import argparse
 import socket
@@ -58,7 +59,6 @@ class Main:
                 "-i", "--ip", help="The hostname/ip of the netcat server", required=True)
         parser.add_argument(
                 "-p", "--port", help="The port to use for netcat.", required=True)
-        print(parser.parse_args(self.get_params()))
         self.set_params(parser.parse_args(self.get_params()))
 
     def run(self):
